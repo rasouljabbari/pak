@@ -28,19 +28,19 @@
                     <button class="dv-search-btn my-2 my-sm-0" type="submit"><i class="far fa-search"></i></button>
                 </form>
                 <ul class="dv-navbar-nav navbar-nav mr-md-auto">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="favorites.html">
                         <li class="nav-item active dv-nav-item d-flex align-items-center">
                             <i class="far fa-heart"></i>
                             <span>علاقه مندی ها</span>
                         </li>
                     </a>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="">
                         <li class="nav-item dv-nav-item d-flex align-items-center">
                             <i class="far fa-shopping-cart"></i>
                             <span>سبد خرید</span>
                         </li>
                     </a>
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="profile.html">
                         <li class="nav-item dv-nav-item d-flex align-items-center">
                             <i class="far fa-user"></i>
                             <span>داشبورد</span>
@@ -126,8 +126,13 @@
                         <span>جمع سبد خرید</span>
                         <span><span class="dv-price">1999000</span> <span>تومان</span></span>
                     </div>
+<!--                    if user is login goto Payment gateway-->
+<!--                    <div class="pt-5 d-flex">-->
+<!--                        <a href="#" target="_blank" class="dv-btn-continuation text-center">ادامه فرایند خرید</a>-->
+<!--                    </div>-->
+<!--                    else go to login and register page-->
                     <div class="pt-5 d-flex">
-                        <a href="#" target="_blank" class="dv-btn-continuation text-center">ادامه فرایند خرید</a>
+                        <a href="loginandregister.html" target="_blank" class="dv-btn-continuation text-center">ادامه فرایند خرید</a>
                     </div>
                 </div>
             </div>
@@ -152,9 +157,9 @@
                     <div class="row align-items-center">
                         <div class="col-6 col-lg-3 mb-3 mb-md-0 pl-md-4 d-flex justify-content-end">
                             <div class="dv-bg-gray-count d-flex" dir="ltr">
-                                <i class="fa fa-minus dv-count-icon d-flex justify-content-center align-items-center"></i>
+                                <i class="fa fa-minus dv-count-icon dv-count-minus d-flex justify-content-center align-items-center" id="dv-count-minus-1"></i>
                                 <div class="dv-count-number d-flex justify-content-center align-items-center">0</div>
-                                <i class="fa fa-plus dv-count-icon d-flex justify-content-center align-items-center"></i>
+                                <i class="fa fa-plus dv-count-icon d-flex justify-content-center align-items-center" id="dv-count-plus-1"></i>
                             </div>
                         </div>
                         <div class="col-6 col-lg-6 mb-3 mb-md-0">
@@ -232,13 +237,13 @@
         <span>پشتیبانی</span>
     </div>
 
-    <div class="dv-right-help-modal">
+        <div class="dv-right-help-modal">
         <a href="#" class=" d-flex flex-column align-items-center" id="go-to-top">
             <i class="fas fa-chevron-up mt-3"></i>
             <span class="mb-3">بالا</span>
         </a>
 
-        <a href="#" class=" d-flex flex-column align-items-center">
+        <a href="comparison.html" class=" d-flex flex-column align-items-center">
             <div class="position-relative dv-badge-parent">
                 <i class="fas fa-equals"></i>
                 <div class="badge dv-badge">0</div>
@@ -246,7 +251,7 @@
             <span class="mb-3">مقایسه</span>
         </a>
 
-        <a href="#" class=" d-flex flex-column align-items-center">
+        <a href="cart.html" class=" d-flex flex-column align-items-center">
             <div class="position-relative dv-badge-parent">
                 <i class="far fa-shopping-cart"></i>
                 <div class="badge dv-badge">10</div>
@@ -271,7 +276,7 @@
                         <a href="#" target='_blank'>پاسخ پرسش‌های پرتکرار</a>
                     </li>
                     <li>
-                        <a href="#" target='_blank'>تماس با ما</a>
+                        <a  href="contact-us.html" >تماس با ما</a>
                     </li>
                     <li>
                         <a href="#" target='_blank'>درباره ما</a>
@@ -311,7 +316,7 @@
                 </form>
             </div>
             <div class="col-12 col-md-6 col-lg-3 mb-3 text-right d-flex flex-column">
-                <div class="mb-md-5"><a href="#" class="text-dark">تماس با ما</a></div>
+                <div class="mb-md-5"><a  href="contact-us.html" class="text-dark">تماس با ما</a></div>
                 <span>021-22568745</span>
 
                 <div class="d-flex flex-column pt-3 pt-md-5">
@@ -360,6 +365,19 @@
     function removeItemFromCart(remove_from_cart_1){
         $(`#${remove_from_cart_1}`).remove()
     }
+    $('#dv-count-plus-1').click(function (){
+        let number = parseInt($('.dv-count-number').text())
+        number +=1;
+        $('.dv-count-number').text(number)
+    })
+    $('#dv-count-minus-1').click(function (){
+        let number = parseInt($('.dv-count-number').text())
+        if(number>0){
+            number -=1;
+            $('.dv-count-number').text(number)
+        }
+
+    })
 </script>
 </body>
 </html>

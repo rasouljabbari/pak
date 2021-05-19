@@ -1,13 +1,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>وبلاگ موبایل پاک</title>
+    <title>فرم ثبت نام موبایل پاک</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <!--    <link rel="shortcut icon" href="assets/img_svg/WhatsApp%20Image%202021-02-24%20at%2010.47.13.png" />-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/toastr.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -106,113 +107,66 @@
 
 <!--main-->
 <main>
-    <div class="px-2 py-5 px-md-5">
-        <div class="row">
-            <div class="col-12 mb-3">
-                <ul class="breadcrumb text-right" dir="rtl">
-                    <li class="breadcrumb-item"><a href="#">خانه</a></li>
-                    <li class="breadcrumb-item"><a href="#">وبلاگ</a></li>
-                    <li class="breadcrumb-item active">مقاله اول</li>
-                </ul>
-            </div>
-            <div class="col-12 mb-5">
-                <div class="bg-blog-archive-content">
-                    <h6 class="text-right mb-3">مقاله شماره یک</h6>
-                    <div class="d-flex justify-content-end mb-3 mb-md-5">
-                        <div class="d-flex flex-column justify-content-center align-items-end">
-                            <p class="mb-0 mt-2">ادمین</p>
-                            <p>1400-09-17</p>
-                        </div>
-                        <div class="img-image-user-comment">
-                            <img src="assets/images/Sample_User_Icon.png" alt="user icon" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="blog-img-parent mb-3 mb-md-5">
-                        <img src="assets/images/6-Best-Wallpaper-Apps-for-the-Samsung-Galaxy-S20-and-S20.webp" alt="blog image pak">
-                    </div>
-                    <p class="text-right">
-                        ​در این مقاله نحوه فعال کردن و استفاده از ویژ‌گی تشخیص سقوط اپل واچ را در اختیار کاربران این محصول بی‌نظیر اپل می‌گذاریم
-
-                        اپل واچ یک قابلیت ویژه دارد که برای ایمن نگه داشتن کاربر صدمات ناشی از سقوط طراحی شده است. اگر کاربر سقوط کند و قادر به پاسخگویی به اپل واچ نباشد این قابلیت با خدمات اورژانسی تماس خواهد گرفت.
-
-                        این قابلیت در اپل واچ سری ۴ و اپل واچ‌های جدیدتر وجود دارد که به اطلاعات تماس اورژانسی کاربر از طریق داده‌های پزشکی موجود در آیفون او متصل می‌شود.
-
-                        روش فعال سازی قابلیت تشخیص سقوط اپل واچ
-
-                        اگر کاربر در تنظیمات اپل واچ یا در اپلیکیشن سلامت اطلاعات خود را وارد کرده باشد، ویژگی تشخیص سقوط به‌طور خودکار فعال می‌شود در غیر این صورت دستورالعمل زیر را دنبال کنید. لازم به ذکر است که برای غیرفعال کردن آن از همین دستور استفاده کنید.
-
-                        ۱٫برنامه ساعت را در آیفون خود باز کنید
-                        ۲٫در انتهای صفحه باز شده روی «My Watch» ضربه بزنید
-                        ۳٫روی «Emergency SOS» ضربه بزنید
-                        ۴٫بسته به ترجیح خود «Fall Detection» را روشن یا خاموش کنید
-                        اگر گزینه Wrist Detection فعال باشد اپل واچ شما به خدمات اورژانسی زنگ می‌زند. برای فعال کردن این گزینه دستور زیر را دنبال کنید.
-
-                        ۱٫برنامه «Setting» را روی اپل واچ خود باز کنید
-                        ۲٫روی گزینه «Passcode» ضربه بزنید
-                        ۳٫«Wrist Detection» را فعال کنید
-                        بعد از فعال شدن گزینه اگر کاربر سقوط شدید داشته باشد و برای چند دقیقه قادر به حرکت نباشد تشخیص سقوط یا Fall Detection این وضعیت را شناسایی می‌کند. ابتدا یک شمارش معکوس ۳۰ ثانیه شروع شده و بعد اپل واچ هم‌زمان با ایجاد صدای اخطار شروع به لرزش می‌کند. می‌توانید با ضربه زدن روی گزینه «Cancel» صدای اخطار را غیرفعال کنید. اگر شمارش معکوس به پایان رسید و شما هنوز آن را لغو نکرده باشید اپل واچ با خدمات اورژانسی تماس می‌گیرد.
-                    </p>
-                </div>
-            </div>
-            <div class="col-12 mb-5">
-                <div class="bg-blog-archive-content" dir="rtl">
-                    <form class="row" >
-                        <label for="dv-message" class="col-12 px-md-0 mb-5 d-flex flex-column">
-                            <span class="mb-5">دیدگاه‌های نوشته</span>
-                            <textarea name="message" id="dv-message" class="dv-input" rows="7"></textarea>
+    <div class="px-md-8 mb-5 my-5">
+        <div class="row" dir="rtl">
+            <div class="col-12">
+                <div class="bg-light p-3 p-md-5">
+                    <h6 class="mb-5">اطلاعات شخصی</h6>
+                    <form action="" class="row">
+                        <label for="dv-name" class="col-12 col-md-6 mb-5">
+                            <input type="text" id="dv-name" class="dv-input" name="first_name" placeholder="نام">
                         </label>
-                        <label for="dv-full-name" class="col-12 col-md-6 col-lg-4 mb-4">
-                            <input id="dv-full-name" type="text" class="dv-input" name="full_name" placeholder="نام و نام خانوادگی">
+                        <label for="dv-lastname" class="col-12 col-md-6 mb-5">
+                            <input type="text" id="dv-lastname" name="last_name" class="dv-input" placeholder="نام و نام خانوادگی">
                         </label>
-                        <label for="dv-email" class="col-12 col-md-6 col-lg-4 mb-4">
-                            <input id="dv-email" type="email" class="dv-input" name="email" placeholder="ایمیل">
+                        <label for="dv-mobile" class="col-12 col-md-6 mb-5">
+                            <input type="tel" id="dv-mobile" class="dv-input" name="mobile" placeholder="شماره همراه">
                         </label>
-                        <div class="col-12 col-md-6 col-lg-4 mb-4 pl-md-0">
-                            <button type="submit" class="dv-submit-btn">ارسال</button>
+                        <label for="dv-email" class="col-12 col-md-6 mb-5">
+                            <input type="email" id="dv-email" name="email" class="dv-input" placeholder="ایمیل">
+                        </label>
+                        <label for="dv-code" class="col-12 col-md-6 offset-md-6 mb-5">
+                            <input type="number" id="dv-code" class="dv-input" name="code" placeholder="کد ملی">
+                        </label>
+                        <label for="dv-password" class="col-12 col-md-6 mb-5">
+                            <input type="password" id="dv-password" class="dv-input" name="password" placeholder="پسورد">
+                        </label>
+                        <label for="dv-confirm-password" class="col-12 col-md-6 mb-5">
+                            <input type="password" id="dv-confirm-password" class="dv-input" name="confirm-password" placeholder="تکرار پسورد">
+                        </label>
+
+                        <div class="col-12 mt-md-5">
+                            <h6 class="mb-5">اطلاعات مسکونی</h6>
                         </div>
 
+                        <label for="dv-province" class="col-12 col-md-6 mb-5">
+                            <select type="text" id="dv-province" class="dv-input" name="province">
+                                <option value="-1">استان</option>
+                            </select>
+                        </label>
+                        <label for="dv-city" class="col-12 col-md-6 mb-5">
+                            <select type="text" id="dv-city" class="dv-input" name="city">
+                                <option value="-1">شهر</option>
+                            </select>
+                        </label>
+                        <label for="dv-address" class="col-12 mb-5">
+                            <input type="tel" id="dv-address" class="dv-input" name="address" placeholder="آدرس">
+                        </label>
+                        <label for="dv-postal-code" class="col-12 col-md-6 mb-5">
+                            <input type="number" id="dv-postal-code" class="dv-input" name="postal-code" placeholder="کد پستی">
+                        </label>
+                        <label for="dv-phone" class="col-12 col-md-6 mb-5">
+                            <input type="tel" id="dv-phone" class="dv-input" name="phone" placeholder="شماره ثابت">
+                        </label>
+                        <label for="dv-btn-submit-residential-register" class="col-12 d-flex justify-content-end mb-5">
+                            <button type="submit" id="dv-btn-submit-residential-register" class="dv-submit-btn dv-custom-width-submit">عضویت</button>
+                        </label>
                     </form>
-                    <div class="row">
-                        <div class="col-12">
-                            <hr class="mt-0 mb-4">
-                        </div>
-                        <div class="col-12 col-lg-3 mb-3">
-                            <h6>علی محمدی</h6>
-                            <p class="mb-3">دوشنبه ۱۳ اردیبهشت ۱۴۰۰</p>
-                            <div class="dv-rate d-flex mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-9 mb-3 d-flex align-items-center">
-                            <p>سلام دوستان من میخوام ابن گوشیم بخرم اما نمیدونم خوبه یا نه اگر میشه بهم بگید محتویات جعبش چیه</p>
-                        </div>
 
-                        <div class="col-12">
-                            <hr class="mt-0 mb-4">
-                        </div>
-                        <div class="col-12 col-lg-3 mb-3">
-                            <h6>علی محمدی</h6>
-                            <p class="mb-3">دوشنبه ۱۳ اردیبهشت ۱۴۰۰</p>
-                            <div class="dv-rate d-flex mb-3">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-9 mb-3 d-flex align-items-center">
-                            <p>سلام دوستان من میخوام ابن گوشیم بخرم اما نمیدونم خوبه یا نه اگر میشه بهم بگید محتویات جعبش چیه</p>
-                        </div>
-
-                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="dv-left-support-modal d-flex flex-column align-items-center">
@@ -259,10 +213,10 @@
                         <a href="#" target='_blank'>پاسخ پرسش‌های پرتکرار</a>
                     </li>
                     <li>
-                        <a href="contact-us.html">تماس با ما</a>
+                        <a  href="contact-us.html"  target='_blank'>تماس با ما</a>
                     </li>
                     <li>
-                        <a href="#">درباره ما</a>
+                        <a href="#" target='_blank'>درباره ما</a>
                     </li>
                     <li>
                         <a href="#" target='_blank'>تامین کنندگان</a>
@@ -292,7 +246,8 @@
                 </p>
                 <form class="input-group">
                     <label for="newsletters" class="mb-0">
-                        <input id="newsletters" class="dv-newsletters-input" type="email" name="email-newsletters" placeholder="ایمیل خود را وارد کنید.">
+                        <input id="newsletters" class="dv-newsletters-input" type="email" name="email-newsletters"
+                               placeholder="ایمیل خود را وارد کنید.">
                     </label>
                     <button type="submit" class="dv-newsletters-btn">عضویت</button>
                 </form>
@@ -302,15 +257,18 @@
                 <span>021-22568745</span>
 
                 <div class="d-flex flex-column pt-3 pt-md-5">
-                    <a href="#" target="_blank" class="dv-instagram d-flex justify-content-between align-items-center mb-3">
+                    <a href="#" target="_blank"
+                       class="dv-instagram d-flex justify-content-between align-items-center mb-3">
                         <span>صفحه ما را دنبال کنید.</span>
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" target="_blank" class="dv-telegram d-flex justify-content-between align-items-center mb-3">
+                    <a href="#" target="_blank"
+                       class="dv-telegram d-flex justify-content-between align-items-center mb-3">
                         <span>کانال ما را دنبال کنید.</span>
                         <i class="fab fa-telegram"></i>
                     </a>
-                    <a href="#" target="_blank" class="dv-whatsapp d-flex justify-content-between align-items-center mb-3">
+                    <a href="#" target="_blank"
+                       class="dv-whatsapp d-flex justify-content-between align-items-center mb-3">
                         <span>با ما در ارتباط باشید.</span>
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -337,8 +295,10 @@
 <script rel="script" src="assets/js/jquery-3.6.0.min.js"></script>
 <script rel="script" src="assets/js/popper.min.js"></script>
 <script rel="script" src="assets/js/bootstrap.min.js"></script>
-<script rel="script" src="assets/js/swiper-bundle.js"></script>
+<script rel="script" src="assets/js/swiper-bundle.min.js"></script>
 <script rel="script" src="assets/js/fontawesome.min.js"></script>
+<script rel="script" src="assets/js/toastr.min.js"></script>
 <script rel="script" src="assets/js/index.js"></script>
+
 </body>
 </html>

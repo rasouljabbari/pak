@@ -106,9 +106,9 @@ let thumb_swiper_2 = new Swiper(".thumb-swiper-2", {
 });
 
 // Add comma to numbers every three digits
-$.fn.digits = function(){
-    return this.each(function(){
-        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+$.fn.digits = function () {
+    return this.each(function () {
+        $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     })
 }
 
@@ -116,17 +116,17 @@ $(".dv-item-price").digits();
 $(".dv-discount").digits();
 $(".dv-price").digits();
 
-$('#go-to-top').each(function(){
+$('#go-to-top').each(function () {
 
-    $(this).click(function(){
+    $(this).click(function () {
         $("html, body").animate({scrollTop: 0}, 1000);
         return false;
     });
 });
 
-$('#go-to-top2').each(function(){
+$('#go-to-top2').each(function () {
 
-    $(this).click(function(){
+    $(this).click(function () {
         $("html, body").animate({scrollTop: 0}, 1000);
         return false;
     });
@@ -134,17 +134,185 @@ $('#go-to-top2').each(function(){
 
 // range slider
 //-----JS for Price Range slider-----
-$(function() {
-    $( "#slider-range" ).slider({
+$(function () {
+    $("#slider-range").slider({
         range: true,
         min: 0,
         max: 100000,
-        values: [ 1, 100000 ],
-        slide: function( event, ui ) {
-            $( "#amount" ).val( "تومان" + ui.values[ 1 ] + " - تومان" + ui.values[ 0 ] );
+        values: [1, 100000],
+        slide: function (event, ui) {
+            $("#amount").val("تومان" + ui.values[1] + " - تومان" + ui.values[0]);
         }
     });
-    $( "#amount" ).val( "تومان" + $( "#slider-range" ).slider( "values", 1 ) +
-        " - تومان" + $( "#slider-range" ).slider( "values", 0 ) );
+    $("#amount").val("تومان" + $("#slider-range").slider("values", 1) +
+        " - تومان" + $("#slider-range").slider("values", 0));
 });
 
+$('#dv-btn-submit').on('click', function () {
+    let first_name = $('.dv-input[name=first_name]').val();
+    let last_name = $('.dv-input[name=last_name]').val();
+    let email = $('.dv-input[name=email]').val();
+    let phone = $('.dv-input[name=mobile]').val();
+    let code = $('.dv-input[name=code]').val();
+
+    let checkArr = [];
+
+    if (!first_name) {
+        checkArr.push('فیلد نام الزامی است')
+    }
+    if (!last_name) {
+        checkArr.push('فیلد نام خانوادگی الزامی است')
+    }
+
+    if (!phone) {
+        checkArr.push('فیلد شماره همراه الزامی است')
+    }
+    if (!email) {
+        checkArr.push('فیلد ایمیل الزامی است')
+    }
+    if (!code) {
+        checkArr.push('فیلد کدملی الزامی است')
+    }
+
+
+    if(!code || !email || !phone || !last_name || !first_name){
+        checkArr.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }
+
+
+});
+
+$('#dv-btn-submit-residential').on('click', function () {
+    let province = $('.dv-input[name=province]').val();
+    let city = $('.dv-input[name=city]').val();
+    let address = $('.dv-input[name=address]').val();
+    let postal_code = $('.dv-input[name=postal-code]').val();
+    let phone = $('.dv-input[name=phone]').val();
+
+    let checkArr = [];
+
+    if (province == -1) {
+        checkArr.push('فیلد استان الزامی است')
+    }
+    if (city == -1) {
+        checkArr.push('فیلد شهر الزامی است')
+    }
+    if (!address) {
+        checkArr.push('فیلد آدرس الزامی است')
+    }
+
+    if (!postal_code) {
+        checkArr.push('فیلد کدپستی الزامی است')
+    }
+    if (!phone) {
+        checkArr.push('فیلد شماره تلفن الزامی است')
+    }
+
+
+    if(province !== '-1' || city !== '-1' || !address || !postal_code || !phone){
+        checkArr.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }
+
+
+});
+
+$('#dv-btn-submit-residential-register').on('click', function () {
+    let first_name = $('.dv-input[name=first_name]').val();
+    let last_name = $('.dv-input[name=last_name]').val();
+    let email = $('.dv-input[name=email]').val();
+    let mobile = $('.dv-input[name=mobile]').val();
+    let code = $('.dv-input[name=code]').val();
+    let password = $('.dv-input[name=password]').val();
+    let confirm_password = $('.dv-input[name=confirm-password]').val();
+    let province = $('.dv-input[name=province]').val();
+    let city = $('.dv-input[name=city]').val();
+    let address = $('.dv-input[name=address]').val();
+    let postal_code = $('.dv-input[name=postal-code]').val();
+    let phone = $('.dv-input[name=phone]').val();
+    let checkArr = [];
+
+
+    if (!first_name) {
+        checkArr.push('فیلد نام الزامی است')
+    }
+
+    if (province == -1) {
+        checkArr.push('فیلد استان الزامی است')
+    }
+    if (city == -1) {
+        checkArr.push('فیلد شهر الزامی است')
+    }
+    if (!address) {
+        checkArr.push('فیلد آدرس الزامی است')
+    }
+
+    if (!postal_code) {
+        checkArr.push('فیلد کدپستی الزامی است')
+    }
+    if (!mobile) {
+        checkArr.push('فیلد شماره تلفن الزامی است')
+    }
+
+    if (!last_name) {
+        checkArr.push('فیلد نام خانوادگی الزامی است')
+    }
+
+    if (!phone) {
+        checkArr.push('فیلد شماره همراه الزامی است')
+    }
+    if (!email) {
+        checkArr.push('فیلد ایمیل الزامی است')
+    }
+    if (!code) {
+        checkArr.push('فیلد کدملی الزامی است')
+    }
+    if (!password) {
+        checkArr.push('فیلد رمزعبور الزامی است')
+    }
+    if (!confirm_password) {
+        checkArr.push('فیلد تکرار رمز الزامی است')
+    }
+
+    console.log(first_name)
+
+    if(province !== '-1' || city !== '-1' || !confirm_password || !password || !address || !postal_code || !mobile || !code || !email || !phone || !last_name || !first_name){
+        checkArr.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }
+});
+
+$('#dv-input-send').on('click', function () {
+    let full_name = $('.dv-input[name=full_name]').val();
+    let email = $('.dv-input[name=email]').val();
+    let message = $('.dv-input[name=message]').val();
+
+
+    let checkArr = [];
+
+    if (!full_name) {
+        checkArr.push('فیلد نام الزامی است')
+    }
+    if (!message) {
+        checkArr.push('فیلد پیام الزامی است')
+    }
+    if (!email) {
+        checkArr.push('فیلد ایمیل الزامی است')
+    }
+
+
+    if(checkArr.length !== 0){
+        console.log(checkArr.length)
+        checkArr?.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }
+});

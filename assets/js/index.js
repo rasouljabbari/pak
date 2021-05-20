@@ -9,7 +9,6 @@ let swiper_product_items = new Swiper(".swiper-product-items", {
     slidesPerView: 1,
     spaceBetween: 10,
     autoplay: true,
-    loop: true,
     navigation: {
         nextEl: ".swiper-button-next1",
         prevEl: ".swiper-button-prev1",
@@ -38,7 +37,6 @@ let swiper_product_items2 = new Swiper(".swiper-product-items2", {
     slidesPerView: 1,
     spaceBetween: 10,
     autoplay: true,
-    loop: true,
     navigation: {
         nextEl: ".swiper-button-next2",
         prevEl: ".swiper-button-prev2",
@@ -67,7 +65,6 @@ let swiper_blog_items = new Swiper(".swiper-blog-items", {
     slidesPerView: 1,
     spaceBetween: 10,
     autoplay: true,
-    loop: true,
     breakpoints: {
         640: {
             slidesPerView: 2,
@@ -307,12 +304,113 @@ $('#dv-input-send').on('click', function () {
         checkArr.push('فیلد ایمیل الزامی است')
     }
 
-
     if(checkArr.length !== 0){
-        console.log(checkArr.length)
         checkArr?.map((row) => {
             toastr.error(row)
         })
         return false
     }
 });
+
+$('#dv-submit-btn-login').on('click', function (e) {
+    let mobile = $('.dv-input[name=mobile]').val();
+    let password = $('.dv-input[name=password]').val();
+    let email = $('.dv-input[name=email]').val();
+    let checkArr = [];
+
+    if (!mobile) {
+        checkArr.push('فیلد شماره تلفن الزامی است')
+    }
+    if (!password) {
+        checkArr.push('فیلد رمزعبور الزامی است')
+    }
+
+    if(checkArr.length !== 0){
+        checkArr?.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }else{
+        e.preventDefault()
+        window.location.replace('profile.html')
+    }
+});
+
+$('#dv-submit-btn-email').on('click', function (e) {
+
+    let email = $('.dv-input[name=email]').val();
+    let checkArr = [];
+
+    if (!email) {
+        checkArr.push('فیلد ایمیل الزامی است')
+    }
+
+    if(checkArr.length !== 0){
+        checkArr?.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }else{
+        e.preventDefault()
+
+        $('#dv-recovery-password').removeClass('d-flex');
+        $('#dv-recovery-password').addClass('d-none');
+
+        $('#dv-set-code').removeClass('d-none');
+        $('#dv-set-code').addClass('d-flex');
+    }
+});
+
+$('#dv-submit-btn-set-code').on('click', function (e) {
+
+    let code = $('.dv-input[name=code]').val();
+    let checkArr = [];
+
+    if (!code) {
+        checkArr.push('فیلد وارد کردن کد الزامی است')
+    }
+
+    if(checkArr.length !== 0){
+        checkArr?.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }else{
+        e.preventDefault()
+
+        $('#dv-set-code').removeClass('d-flex');
+        $('#dv-set-code').addClass('d-none');
+
+        $('#dv-set-new-password').removeClass('d-none');
+        $('#dv-set-new-password').addClass('d-flex');
+    }
+});
+
+$('#dv-submit-btn-new-password').on('click', function (e) {
+
+    let password = $('.dv-input[name=password]').val();
+    let confirm_password = $('.dv-input[name=confirm-password]').val();
+    let checkArr = [];
+
+    if (!password) {
+        checkArr.push('فیلد رمزعیور الزامی است')
+    }
+    if (!confirm_password) {
+        checkArr.push('فیلد تکرار رمزعبور الزامی است')
+    }
+
+    if(checkArr.length !== 0){
+        checkArr?.map((row) => {
+            toastr.error(row)
+        })
+        return false
+    }else{
+        e.preventDefault()
+
+        window.location.replace('profile.html')
+    }
+});
+
+$('.dv-heart-icon').on('click' , function (){
+    $(this).toggleClass('fas fal')
+})

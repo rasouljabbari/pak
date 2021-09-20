@@ -59,3 +59,25 @@ let offerSlider = new Swiper(".offerSlider", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+$(function () {
+    $("#slider-range").slider({
+        range: true,
+        min: 0,
+        max: 1000000,
+        values: [15000, 500000],
+        slide: function (event, ui) {
+            $("#amount").val("از " + ui.values[0] + " ریال تا " + ui.values[1] + " ریال ");
+        }
+    });
+    $("#amount").val("" + $("#slider-range").slider("values", 0) +
+        " - " + $("#slider-range").slider("values", 1));
+});
+
+$('.panel-collapse').on('show.bs.collapse', function () {
+    $(this).siblings('.panel-heading').addClass('active');
+});
+
+$('.panel-collapse').on('hide.bs.collapse', function () {
+    $(this).siblings('.panel-heading').removeClass('active');
+});

@@ -1,5 +1,6 @@
 :root {
     --mainRed: #ce0000;
+    --lightRed: #FB2A27;
     --cardRed: #F44336;
     --main-green: #22b14c;
     --social-blue: #00aff0;
@@ -16,8 +17,9 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: iranSans !important;
-    background: #EEEEEE;
+    background: #fff;
     text-align: right;
+    overflow-x: hidden;
 }
 
 input::-webkit-outer-spin-button,
@@ -45,7 +47,8 @@ ul {
     padding: 0.5rem;
     list-style: none;
 }
-p , h1,h2,h3,h4,h5,h6{
+
+p, h1, h2, h3, h4, h5, h6 {
     line-height: 30px;
 }
 
@@ -55,27 +58,33 @@ p , h1,h2,h3,h4,h5,h6{
     padding: 1.5rem 0 2vh 0;
     box-shadow: 0 5px 50px 0 #7070708f;
 }
-.text-red{
+
+.text-red {
     color: var(--mainRed);
 }
-.f-32{
+
+.f-32 {
     font-size: 32px;
 }
-.dv-search-form{
+
+.dv-search-form {
     width: 100%;
 }
-.dv-navbar-brand:hover{
+
+.dv-navbar-brand:hover {
     color: var(--mainRed);
 }
-.text-gray{
+
+.text-gray {
     color: #808080 !important;
     font-size: 14px;
 }
-.dv-search-form input ,.dv-search-form input:focus{
+
+.dv-search-form input, .dv-search-form input:focus {
     padding: 1.5rem 4rem 1.5rem 1rem;
     width: 100% !important;
     border-radius: 20px;
-    background-color:#F6F6F6;
+    background-color: #F6F6F6;
     border: none;
 }
 
@@ -94,9 +103,10 @@ p , h1,h2,h3,h4,h5,h6{
     font-size: 24px;
 }
 
-.dv-dropdown-menu{
+.dv-dropdown-menu {
     width: 100%;
 }
+
 .dv-nav-item {
     background: #fff;
     border-radius: 5px;
@@ -111,9 +121,10 @@ p , h1,h2,h3,h4,h5,h6{
 .dv-nav-item:hover {
     background: #e0e0e0;
 }
+
 .dv-dropdown-menu .nav-item {
     margin: 0 0 0 2.5vh;
-    color: rgba(0,0,0,.5);
+    color: rgba(0, 0, 0, .5);
 }
 
 .dv-nav-item a {
@@ -124,9 +135,10 @@ p , h1,h2,h3,h4,h5,h6{
     padding-right: 0.5rem;
 }
 
-.dv-dropdown-content .dropdown-toggle::after{
+.dv-dropdown-content .dropdown-toggle::after {
     color: var(--mainRed);
 }
+
 .dv-dropdown-menu .dropdown-toggle {
     display: flex;
     align-items: center;
@@ -142,7 +154,7 @@ p , h1,h2,h3,h4,h5,h6{
     border-top: 1px solid var(--mainRed);
 }
 
-.dv-mega-menu{
+.dv-mega-menu {
     width: 100vw;
     min-height: 320px;
     position: fixed !important;
@@ -151,12 +163,13 @@ p , h1,h2,h3,h4,h5,h6{
     z-index: 0;
 }
 
-.dv-header-icons{
+.dv-header-icons {
     color: #808080;
     font-size: 18px;
     padding: 0.7rem 0 0 1rem !important;
 }
-.dv-card-items-number{
+
+.dv-card-items-number {
     position: absolute;
     top: 0.4rem;
     right: -0.5rem;
@@ -169,37 +182,451 @@ p , h1,h2,h3,h4,h5,h6{
     font-size: 12px;
     border-radius: 50%;
 }
-.dv-toggler-btn{
+
+.dv-toggler-btn {
     color: #000;
     position: absolute;
     top: 0;
     left: 0;
 }
+
 .dv-navbar .fa-bars {
     color: #000;
     font-size: 32px;
 }
+
+.bg-light {
+    background: #FFF !important;
+    border-radius: 10px;
+}
+
+/************ End Header ***************/
+
+/************* Start main ***************/
+.menuSwiper {
+    min-width: 300px;
+    max-width: 380px;
+    height: 100%;
+}
+
+.menuSwiper .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    min-width: 300px;
+    max-width: 380px;
+}
+
+.menuSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.f-16 {
+    font-size: 16px;
+}
+
+.dv-menu-item {
+    margin-bottom: 0.75rem;
+}
+
+.dv-menu-item a {
+    color: #212121;
+    transition: all 0.25s linear;
+}
+
+.dv-menu-item a:hover {
+    color: var(--mainRed);
+}
+
+.BannerSwiper.swiper {
+    width: 100%;
+    height: 446px;
+}
+
+.samsungSlider.swiper {
+    width: 100%;
+    height: 303px;
+    position: relative;
+}
+
+.BannerSwiper .swiper-slide, .samsungSlider .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    height: inherit;
+}
+
+.BannerSwiper .swiper-slide a, .BannerSwiper .swiper-slide a img, .samsungSlider .swiper-slide a, .samsungSlider .swiper-slide a img {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+
+.BannerSwiper .swiper-button-prev, .BannerSwiper .swiper-container-rtl .swiper-button-next {
+    left: 4rem;
+}
+
+.BannerSwiper .swiper-button-next, .BannerSwiper .swiper-container-rtl .swiper-button-prev {
+    right: 4rem;
+}
+
+.samsungSlider .swiper-button-prev, .samsungSlider .swiper-container-rtl .swiper-button-next {
+    left: 2rem;
+}
+
+.samsungSlider .swiper-button-next, .samsungSlider .swiper-container-rtl .swiper-button-prev {
+    right: 2rem;
+}
+
+/*for All sliders*/
+.BannerSwiper .swiper-button-prev:after, .BannerSwiper .swiper-container-rtl .swiper-button-next:after, .BannerSwiper .swiper-button-next:after, .BannerSwiper .swiper-container-rtl .swiper-button-prev:after, .samsungSlider .swiper-button-prev:after, .samsungSlider .swiper-container-rtl .swiper-button-next:after, .samsungSlider .swiper-button-next:after, .samsungSlider .swiper-container-rtl .swiper-button-prev:after {
+    color: #fff;
+}
+
+.samsungSlider .swiper-button-prev:after, .samsungSlider .swiper-container-rtl .swiper-button-next:after, .samsungSlider .swiper-button-next:after, .samsungSlider .swiper-container-rtl .swiper-button-prev:after {
+    font-size: 24px;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(256, 256, 256, 0.95);
+    width: 18px;
+    height: 18px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #fff !important;
+}
+
+/*for All sliders*/
+
+.dv-black-banner, .dv-agsat-banner, .dv-anner-banner {
+    width: 100%;
+}
+
+.dv-black-banner a, .dv-agsat-banner a, .dv-anner-banner a {
+    width: inherit;
+}
+
+.dv-black-banner a img {
+    width: inherit;
+    height: 88px;
+}
+
+.dv-agsat-banner a img, .dv-anner-banner a img {
+    width: inherit;
+    height: 198px;
+}
+
+.dv-product-card {
+    background: #fff;
+    /*width: 310px;*/
+    height: 430px;
+    transition: all 0.25s linear;
+    padding: 1rem;
+}
+
+.dv-discount-price {
+    background: var(--lightRed);
+    border-radius: 20px;
+    color: #fff;
+    width: 68px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+}
+
+.dv-discount-price-offer {
+    background: var(--lightRed);
+    border-radius: 20px;
+    color: #fff;
+    width: 68px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-red {
+    color: var(--lightRed);
+}
+
+.dv-card-img-top {
+    display: block;
+    margin: auto;
+    width: 240px;
+    height: 277px;
+}
+
+.dv-card-img-top img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    transform: scale(0.85);
+    transition: all 0.25s linear;
+}
+
+.dv-product-card:hover {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+.dv-product-card:hover img {
+    transform: scale(0.9);
+}
+
+.offerSlider.swiper {
+    width: 100%;
+    /*height: 100%;*/
+    position: relative;
+}
+.offerSlider .swiper-wrapper{
+    height: auto;
+}
+
+.offerSlider .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.offerSlider .swiper-slide .dv-offer-cards {
+    display: block;
+    width: 100%;
+    height: 246px;
+    border: 1px solid rgba(184, 184, 184, 0.35);
+    border-radius: 0;
+    padding: 1rem;
+}
+
+.dv-offer-img {
+    height: 210px;
+    width: 221px;
+}
+
+.dv-offer-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dv-offer-text {
+    height: 210px;
+}
+
+.offerSlider .swiper-button-prev, .offerSlider .swiper-container-rtl .swiper-button-next {
+    right: 1rem;
+}
+
+.offerSlider .swiper-button-next, .offerSlider .swiper-container-rtl .swiper-button-prev {
+    left: 1rem;
+}
+
+/*for All sliders*/
+.offerSlider .swiper-button-prev:after,
+.offerSlider .swiper-container-rtl .swiper-button-next:after,
+.offerSlider .swiper-button-next:after,
+.offerSlider .swiper-container-rtl .swiper-button-prev:after {
+    font-size: 18px;
+    color: rgba(24, 11, 37, 0.97);
+}
+
+.dv-banners-after-offer{
+    width: 100%;
+    height: 222px;
+}
+.dv-banners-after-offer img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.dv-blog-card{
+    display: block;
+    width: 100%;
+    height: 460px;
+    border: 1px solid rgba(184, 184, 184, 0.35);
+    border-radius: 0;
+    padding: 1rem;
+}
+.dv-blog-card-img-top{
+    display: block;
+    width: 100%;
+    height: 284px;
+    object-fit: cover;
+}
+.dv-blog-card-img-top img{
+    display: block;
+    margin: auto;
+    height: inherit;
+}
+.f-18{
+    font-size: 18px;
+}
+.dv-product-card-text p.dv-blog-description{
+    overflow: hidden;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.text-orange{
+    color: var(--lightRed);
+}
+.f-13{
+    font-size: 13px;
+}
+
+.dv-footer-link{
+    color: #BEDBFF;
+    font-size: 16px;
+    transition: all 0.2s linear;
+}
+.dv-footer-link:hover{
+    color: #fff;
+}
+.dv-footer-form input{
+    background: #fff;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    font-size: 16px;
+    padding: 0.75rem 1.25rem;
+    width: 80%;
+}
+.dv-footer-form input::placeholder{
+    color: #AFAFAF;
+}
+.dv-footer-form input:focus{
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+.dv-footer-form button{
+    background: var(--lightRed);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px 0 0 10px;
+    width: 20%;
+}
+.dv-footer{
+    background-color: #0F0914;
+}
+.dv-copy-right{
+    background: #1D1229;
+    padding: 1rem 0;
+}
+.dv-footer-social i{
+    color: #FFFFFF;
+    font-size: 26px;
+}
+@media (min-width: 992px) {
+    .px-md-8 {
+        padding: 3rem 6rem;
+    }
+    .footer-social-px-md-8{
+        padding: 1rem 6rem;
+    }
+    .footer-px-md-8{
+        padding: 4rem 6rem 0;
+    }
+    .footer-copyright-px-md-8{
+        padding: 0 6rem;
+    }
+}
+
 @media (min-width: 1367px) {
     .dv-dropdown-menu .nav-item {
         margin: 0 0 0 2rem;
     }
 }
-@media (max-width: 992px) {
-    .dv-mega-menu{
+
+@media (max-width: 1100px) {
+    .dv-mega-menu {
         position: absolute !important;
         top: 2.5rem !important;
         right: 0 !important;
-        width: 90vw;
+        width: 85vw;
         z-index: 1;
     }
+
+    .menuSwiper, .menuSwiper .swiper-slide {
+        min-width: 350px;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 992px) {
     .dv-dropdown-menu .nav-item {
         height: 40px;
     }
-}
-.bg-light {
-    background: #FFF !important;
-    border-radius: 10px;
-}
-/************ End Header ***************/
 
-/************* Start main ***************/
+    .menuSwiper, .menuSwiper .swiper-slide {
+        min-width: 300px;
+        max-width: 350px;
+    }
+    .px-md-8,.footer-copyright-px-md-8{
+        padding: 1rem;
+    }
+    .footer-px-md-8{
+        padding: 3rem 1rem;
+    }
+    .footer-social-px-md-8{
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .BannerSwiper.swiper {
+        width: 100%;
+        height: 310px;
+    }
+
+    .samsungSlider .swiper-button-prev, .samsungSlider .swiper-container-rtl .swiper-button-next, .BannerSwiper .swiper-button-prev, .BannerSwiper .swiper-container-rtl .swiper-button-next {
+        left: 1rem;
+    }
+
+    .BannerSwiper .swiper-button-next, .BannerSwiper .swiper-container-rtl .swiper-button-prev, .samsungSlider .swiper-button-next, .samsungSlider .swiper-container-rtl .swiper-button-prev {
+        right: 1rem;
+    }
+
+    .BannerSwiper .swiper-button-prev:after, .BannerSwiper .swiper-container-rtl .swiper-button-next:after, .BannerSwiper .swiper-button-next:after, .BannerSwiper .swiper-container-rtl .swiper-button-prev:after, .samsungSlider .swiper-button-prev:after, .samsungSlider .swiper-container-rtl .swiper-button-next:after, .samsungSlider .swiper-button-next:after, .samsungSlider .swiper-container-rtl .swiper-button-prev:after {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+    .menuSwiper, .menuSwiper .swiper-slide {
+        min-width: 250px;
+        max-width: 300px;
+    }
+
+    .dv-mega-menu {
+        width: 85vw;
+    }
+}

@@ -153,14 +153,18 @@ p, h1, h2, h3, h4, h5, h6 {
     /*left: 50%;*/
     border-top: 1px solid var(--mainRed);
 }
-
+.dv-navbar .nav-item.dropdown{
+    position: unset !important;
+}
 .dv-mega-menu {
     width: 100vw;
     min-height: 320px;
-    position: fixed !important;
-    left: 0 !important;
-    top: 154px;
-    z-index: 0;
+    transform: translate(19% , 17%);
+    left: auto;
+    border-top: 1px solid var(--mainRed);
+    right: 0;
+    top: 0;
+    z-index: 99;
 }
 
 .dv-header-icons {

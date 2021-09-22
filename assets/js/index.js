@@ -60,6 +60,20 @@ let offerSlider = new Swiper(".offerSlider", {
     },
 });
 
+let dvBlogPostSlider = new Swiper(".dvBlogPostSlider", {
+    spaceBetween: 30,
+    autoplay : true,
+    effect: "fade",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
 $(function () {
     $("#slider-range").slider({
         range: true,

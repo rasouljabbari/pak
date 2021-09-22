@@ -1242,7 +1242,7 @@ ul {
 
 /* When the radio button is checked, add a blue background */
 .dv-comparison-radio input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: var(--lightRed);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -1257,12 +1257,13 @@ ul {
     display: block;
 }
 
+
 /* Style the indicator (dot/circle) */
 .dv-comparison-radio .checkmark:after {
-    top: 9px;
-    left: 9px;
-    width: 8px;
-    height: 8px;
+    top: 5px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background: white;
 }
@@ -1496,41 +1497,69 @@ input:focus, select:focus, textarea:focus {
     font-size: 22px;
 }
 
-.dv-empty-cart-height{
+.dv-empty-cart-height {
     height: 350px;
 }
 
-.dv-empty-cart{
+.dv-empty-cart {
     background: #F6F6F6;
     color: #808080;
     padding: 1rem;
 }
 
-.dv-cart-product-img{
+.dv-cart-product-img {
     width: 120px;
     height: 120px;
 }
-.dv-cart-product-img img{
+
+.dv-cart-product-img img {
     max-width: 120px;
     height: inherit;
     object-fit: cover;
 }
 
-.dv-mojodi{
+.dv-mojodi {
     color: #AC8697;
 }
-.dv-right-content-box-shadow , .dv-box-shadow-left-content{
+
+.dv-right-content-box-shadow, .dv-box-shadow-left-content {
     border-radius: 0;
     border: 1px solid #D8D8D8;
     padding: 1.5rem;
 }
-.dv-custom-hr{
+
+.dv-custom-hr {
     border-bottom: 1px solid #D8D8D8;
 }
 
-.dv-cart-number{
+.dv-cart-number {
     width: 35px;
 }
+
+.dv-address-inputs, .dv-address-inputs:focus {
+    border: 1px solid #D8D8D8 !important;
+    padding: 1rem 0.5rem;
+}
+
+.dv-pay-text {
+    padding-right: 3rem;
+    padding-top: 0.75rem;
+    /*position: absolute;*/
+    /*right: 2rem;*/
+}
+
+.dv-payment-img{
+    width: 110px;
+    height: 95px;
+}
+.dv-comparison-radio input:checked ~ .dv-payment-img img{
+    border: 2px solid var(--lightRed);
+}
+/*.dv-payment-img img{*/
+/*    width: inherit;*/
+/*    height: inherit;*/
+/*    object-fit: cover;*/
+/*}*/
 
 @media (min-width: 992px) {
     .px-md-8 {

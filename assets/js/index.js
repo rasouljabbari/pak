@@ -1,7 +1,7 @@
 let swiper = new Swiper(".menuSwiper", {
-    autoplay : true,
+    autoplay: true,
     effect: "flip",
-    spaceBetween : 50,
+    spaceBetween: 50,
     grabCursor: true,
     // pagination: {
     //     el: ".swiper-pagination",
@@ -10,7 +10,7 @@ let swiper = new Swiper(".menuSwiper", {
 
 let BannerSwiper = new Swiper(".BannerSwiper", {
     spaceBetween: 30,
-    autoplay : true,
+    autoplay: true,
     effect: "fade",
     navigation: {
         nextEl: ".swiper-button-next",
@@ -24,7 +24,7 @@ let BannerSwiper = new Swiper(".BannerSwiper", {
 
 let samsungSlider = new Swiper(".samsungSlider", {
     spaceBetween: 30,
-    autoplay : true,
+    autoplay: true,
     effect: "fade",
     navigation: {
         nextEl: ".swiper-button-next",
@@ -62,7 +62,7 @@ let offerSlider = new Swiper(".offerSlider", {
 
 let dvBlogPostSlider = new Swiper(".dvBlogPostSlider", {
     spaceBetween: 30,
-    autoplay : true,
+    autoplay: true,
     effect: "fade",
     navigation: {
         nextEl: ".swiper-button-next",
@@ -113,9 +113,9 @@ var largeSlider = new Swiper(".largeSlider", {
     },
 });
 
-$.fn.digits = function(){
-    return this.each(function(){
-        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+$.fn.digits = function () {
+    return this.each(function () {
+        $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     })
 }
 
@@ -125,11 +125,11 @@ $(document).ready(function () {
     $('.dv-discount-price-value').text(discount_price)
     $('.dv-discount-price-value').data('discount-unit-price', discount_price)
     $('.dv-price-value').text(price)
-    $('.dv-price-value').data('unit-price' , price)
+    $('.dv-price-value').data('unit-price', price)
     $(".dv-discount-price-value , .dv-price-value").digits();
 })
 
-$('.js-variant-selector').on('change' , function () {
+$('.js-variant-selector').on('change', function () {
     let value = $(this).val()
     let price = $(this).data('price')
     let discount_price = $(this).data('discount-price')
@@ -138,12 +138,12 @@ $('.js-variant-selector').on('change' , function () {
     $('.dv-price-value').text(price)
 
     $('.dv-discount-price-value').data('discount-unit-price', discount_price)
-    $('.dv-price-value').data('unit-price' , price)
+    $('.dv-price-value').data('unit-price', price)
     $('.dv-product-count').text(1)
     $(".dv-discount-price-value , .dv-price-value").digits();
 })
 
-$('.fa-number-plus').on('click' , function () {
+$('.fa-number-plus').on('click', function () {
     let count = $('.dv-product-count').text()
     let price_unit = $('.dv-price-value').data('unit-price')
 
@@ -152,11 +152,11 @@ $('.fa-number-plus').on('click' , function () {
     $(".dv-discount-price-value , .dv-price-value").digits();
 })
 
-$('.fa-number-minus').on('click' , function () {
+$('.fa-number-minus').on('click', function () {
     let count = $('.dv-product-count').text()
     let price_unit = $('.dv-price-value').data('unit-price')
 
-    if(count > 1){
+    if (count > 1) {
         $('.dv-product-count').text(parseInt(count) - 1)
         $('.dv-price-value').text((parseInt(count) - 1) * parseInt(price_unit))
         $(".dv-discount-price-value , .dv-price-value").digits();
@@ -164,7 +164,7 @@ $('.fa-number-minus').on('click' , function () {
 })
 
 
-$('.dv-add-number').on('click' , function () {
+$('.dv-add-number').on('click', function () {
     let count = $('.dv-cart-number').val()
     let price_unit = $('.dv-cart-price-value').data('price')
 
@@ -173,13 +173,23 @@ $('.dv-add-number').on('click' , function () {
     $(".dv-cart-price-value").digits();
 })
 
-$('.dv-minus-number').on('click' , function () {
+$('.dv-minus-number').on('click', function () {
     let count = $('.dv-cart-number').val()
     let price_unit = $('.dv-cart-price-value').data('price')
 
-    if(count > 1){
+    if (count > 1) {
         $('.dv-cart-number').val(parseInt(count) - 1)
         $('.dv-cart-price-value').text((parseInt(count) - 1) * parseInt(price_unit))
         $(".dv-cart-price-value").digits();
+    }
+})
+
+$('input[name="payment_method"]').on('change', function (e) {
+    if (e.target.value === 'online') {
+        $('.dv-cart-to-cart').addClass('d-none')
+        $('.dv-online').removeClass('d-none')
+    }else{
+        $('.dv-cart-to-cart').removeClass('d-none')
+        $('.dv-online').addClass('d-none')
     }
 })

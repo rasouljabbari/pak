@@ -162,3 +162,24 @@ $('.fa-number-minus').on('click' , function () {
         $(".dv-discount-price-value , .dv-price-value").digits();
     }
 })
+
+
+$('.dv-add-number').on('click' , function () {
+    let count = $('.dv-cart-number').val()
+    let price_unit = $('.dv-cart-price-value').data('price')
+
+    $('.dv-cart-number').val(parseInt(count) + 1)
+    $('.dv-cart-price-value').text((parseInt(count) + 1) * parseInt(price_unit))
+    $(".dv-cart-price-value").digits();
+})
+
+$('.dv-minus-number').on('click' , function () {
+    let count = $('.dv-cart-number').val()
+    let price_unit = $('.dv-cart-price-value').data('price')
+
+    if(count > 1){
+        $('.dv-cart-number').val(parseInt(count) - 1)
+        $('.dv-cart-price-value').text((parseInt(count) - 1) * parseInt(price_unit))
+        $(".dv-cart-price-value").digits();
+    }
+})

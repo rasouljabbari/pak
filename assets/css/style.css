@@ -1070,6 +1070,10 @@ input[type=radio]:checked + .c-circle-variant__border {
     width: 100%;
     max-height: 300px;
 }
+.dv-description-img img{
+    display: block;
+    margin: auto;
+}
 
 .l-45 {
     line-height: 45px;
@@ -1554,6 +1558,14 @@ input:focus, select:focus, textarea:focus {
 }
 .dv-comparison-radio input:checked ~ .dv-payment-img img{
     border: 2px solid var(--lightRed);
+}
+
+.f-15{
+    font-size: 15px;
+}
+
+.dv-border-top{
+    border-top: 1px solid var(--lightRed);
 }
 /*.dv-payment-img img{*/
 /*    width: inherit;*/

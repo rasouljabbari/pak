@@ -1070,7 +1070,8 @@ input[type=radio]:checked + .c-circle-variant__border {
     width: 100%;
     max-height: 300px;
 }
-.dv-description-img img{
+
+.dv-description-img img {
     display: block;
     margin: auto;
 }
@@ -1327,7 +1328,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .dv-red-btn {
-    background: var(--lightRed);
+    background: var(--mainRed);
     border-radius: 5px;
     border: none;
     color: #fff;
@@ -1337,7 +1338,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .dv-red-btn:hover {
-    background: var(--mainRed);
+    background: var(--lightRed);
 }
 
 .dv-blog-posts-card {
@@ -1552,26 +1553,107 @@ input:focus, select:focus, textarea:focus {
     /*right: 2rem;*/
 }
 
-.dv-payment-img{
+.dv-payment-img {
     width: 110px;
     height: 95px;
 }
-.dv-comparison-radio input:checked ~ .dv-payment-img img{
+
+.dv-comparison-radio input:checked ~ .dv-payment-img img {
     border: 2px solid var(--lightRed);
 }
 
-.f-15{
+.f-15 {
     font-size: 15px;
 }
 
-.dv-border-top{
+.dv-border-top {
     border-top: 1px solid var(--lightRed);
 }
-/*.dv-payment-img img{*/
+
+/*.dv-login-bg-img img{*/
 /*    width: inherit;*/
 /*    height: inherit;*/
+/*    display: block;*/
 /*    object-fit: cover;*/
 /*}*/
+.f-32{
+    font-size: 32px;
+}
+.dv-back-arrow{
+    position: absolute;
+    left: 4rem;
+    top: 3rem;
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+}
+a.text-red:hover{
+    color: var(--lightRed);
+}
+.dv-login-form-input{
+    background-color: #F8F8F8;
+    color: #212121;
+    font-size: 16px;
+    border: none;
+    padding: 0.75rem 0.5rem;
+    text-align: right;
+}
+.dv-login-form-input::placeholder{
+    color: #808080;
+}
+
+.dv-link-login-text {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dv-login-bg-img{
+    width: 100%;
+    background-image: url("../images/login1080.jpg");
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100% !important;
+}
+
+.dv-center-bg-form{
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 5px;
+    color: #fff;
+    width: 40%;
+}
+
+.dv-login-main{
+    height: 100vh;
+}
+
+.dv-alert-arrow{
+    color: var(--mainRed);
+}
+@media (min-width: 1367px) {
+    .dv-dropdown-menu .nav-item {
+        margin: 0 0 0 2rem;
+    }
+    .dv-login-form{
+        padding: 4rem;
+    }
+}
 
 @media (min-width: 992px) {
     .px-md-8 {
@@ -1589,12 +1671,7 @@ input:focus, select:focus, textarea:focus {
     .footer-copyright-px-md-8 {
         padding: 0 6rem;
     }
-}
 
-@media (min-width: 1367px) {
-    .dv-dropdown-menu .nav-item {
-        margin: 0 0 0 2rem;
-    }
 }
 
 @media (max-width: 1100px) {
@@ -1609,6 +1686,10 @@ input:focus, select:focus, textarea:focus {
     .menuSwiper, .menuSwiper .swiper-slide {
         min-width: 350px;
         max-width: 400px;
+    }
+
+    .dv-center-bg-form{
+        width: 60%;
     }
 }
 
@@ -1641,6 +1722,10 @@ input:focus, select:focus, textarea:focus {
     .dvBlogPostSlider .swiper-button-next, .dvBlogPostSlider .swiper-container-rtl .swiper-button-prev {
         right: 1rem;
     }
+
+    .dv-center-bg-form{
+        width: 80%;
+    }
 }
 
 @media (min-width: 768.01px) {
@@ -1658,6 +1743,9 @@ input:focus, select:focus, textarea:focus {
 }
 
 @media (max-width: 768px) {
+    .dv-login-bg-img{
+        background: url("../images/login_responsive.jpg") no-repeat;
+    }
     .w-sm-75, .w-sm-25 {
         width: 100%;
         margin: 0 0 0.5rem 0;
@@ -1683,6 +1771,13 @@ input:focus, select:focus, textarea:focus {
     .BannerSwiper .swiper-button-prev:after, .BannerSwiper .swiper-container-rtl .swiper-button-next:after, .BannerSwiper .swiper-button-next:after, .BannerSwiper .swiper-container-rtl .swiper-button-prev:after, .samsungSlider .swiper-button-prev:after, .samsungSlider .swiper-container-rtl .swiper-button-next:after, .samsungSlider .swiper-button-next:after, .samsungSlider .swiper-container-rtl .swiper-button-prev:after {
         font-size: 18px;
     }
+
+    .dv-login-form{
+        padding: 2rem 3rem;
+    }
+    .dv-center-bg-form{
+        width: 90%;
+    }
 }
 
 @media (max-width: 420px) {
@@ -1693,5 +1788,9 @@ input:focus, select:focus, textarea:focus {
 
     .dv-mega-menu {
         width: 85vw;
+    }
+
+    .dv-login-form{
+        padding: 2rem 1rem;
     }
 }

@@ -1646,12 +1646,23 @@ a.text-red:hover{
 .dv-alert-arrow{
     color: var(--mainRed);
 }
+
+.code-input , .code-input:focus{
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid #f8f8f8 !important;
+    width: 45px;
+    height: 45px;
+    margin: 0 0.25rem;
+    color: #fff;
+    text-align: center;
+}
 @media (min-width: 1367px) {
     .dv-dropdown-menu .nav-item {
         margin: 0 0 0 2rem;
     }
     .dv-login-form{
-        padding: 4rem;
+        padding: 3rem 4rem;
     }
 }
 

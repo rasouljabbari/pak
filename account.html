@@ -16,18 +16,27 @@
 
 <!--main-->
 <main class="dv-login-main">
-
+  <!--    <div class="row px-0" dir="rtl">-->
+  <!--        <div class="col-12">-->
   <div class="dv-login-bg-img" dir="rtl"></div>
-  <div class="d-flex flex-column px-3 px-md-5 dv-center-bg-form pt-4 ">
-    <a href="login.html"><i class="fal fa-long-arrow-left dv-back-arrow"></i></a>
+  <!--                <img src="assets/images/login1080.jpg" alt="موبایل پاک">-->
+  <div class="d-flex flex-column px-3 px-md-5 dv-center-bg-form py-4">
+    <a href="index.html"><i class="fal fa-long-arrow-left dv-back-arrow"></i></a>
     <a href="index.html" class="text-light f-32 text-center my-4 font-weight-bold fit-content mx-auto">PAK</a>
 
     <form action="" class="dv-login-form d-flex flex-column align-items-center">
-      <h6 class="font-weight-bold mb-5">ایجاد حساب کاربری</h6>
-      <input type="number" name="mobile" class="dv-login-form-input mb-3 w-100"
-             placeholder="شماره همراه">
-      <button type="submit" class="dv-red-btn rounded-pill w-100 mb-3 f-16 py-2 mt-5">عضویت</button>
+      <h6 class="font-weight-bold mb-5">تکمیل اطلاعات حساب کاربری</h6>
+
+        <input id="name" type="text" name="name" class="dv-login-form-input mb-3 mt-2 w-100"
+               placeholder="نام">
+        <input id="last_name" type="text" name="last_name" class="dv-login-form-input mb-3 mt-2 w-100"
+               placeholder="نام خوانوادگی">
+      <input id="email" type="email" name="email" class="dv-login-form-input mb-3 mt-2 w-100"
+             placeholder="ایمیل">
+
+      <button type="submit" class="dv-red-btn rounded-pill w-100 my-3 f-16 py-2">ثبت</button>
     </form>
+
   </div>
 </main>
 <!--end main-->

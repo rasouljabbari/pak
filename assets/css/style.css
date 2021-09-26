@@ -56,7 +56,8 @@ p, h1, h2, h3, h4, h5, h6 {
 .dv-navbar {
     background: #fff;
     padding: 1.5rem 0 2vh 0;
-    box-shadow: 0 5px 50px 0 #7070708f;
+    /*filter: drop-shadow(0 5px 50px #7070702e);*/
+    box-shadow: 0 5px 50px 0 #7070702e;
 }
 
 .text-red {
@@ -1691,7 +1692,7 @@ a.text-red:hover{
         top: 2.5rem !important;
         right: 0 !important;
         width: 85vw;
-        z-index: 1;
+        /*z-index: 1;*/
     }
 
     .menuSwiper, .menuSwiper .swiper-slide {
@@ -1708,7 +1709,9 @@ a.text-red:hover{
     .dv-dropdown-menu .nav-item {
         height: 40px;
     }
-
+    .dv-mega-menu{
+        transform: none !important;
+    }
     .menuSwiper, .menuSwiper .swiper-slide {
         min-width: 300px;
         max-width: 350px;
@@ -1736,6 +1739,9 @@ a.text-red:hover{
 
     .dv-center-bg-form{
         width: 80%;
+    }
+    .dv-navbar .nav-item.dropdown {
+        position: relative !important;
     }
 }
 
@@ -1766,9 +1772,14 @@ a.text-red:hover{
         width: 100%;
     }
 
-    .BannerSwiper.swiper {
+    .BannerSwiper.swiper , .samsungSlider.swiper , .dv-agsat-banner a img, .dv-anner-banner a img , .offerSlider .swiper-slide .dv-offer-cards,
+    .dv-banners-after-offer{
         width: 100%;
-        height: 310px;
+        height: auto !important;
+    }
+    .dv-search-btn {
+        right: 1rem;
+        top: -0.2rem;
     }
 
     .samsungSlider .swiper-button-prev, .samsungSlider .swiper-container-rtl .swiper-button-next, .BannerSwiper .swiper-button-prev, .BannerSwiper .swiper-container-rtl .swiper-button-next {

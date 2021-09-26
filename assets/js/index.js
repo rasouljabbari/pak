@@ -10,7 +10,7 @@ let swiper = new Swiper(".menuSwiper", {
 
 let BannerSwiper = new Swiper(".BannerSwiper", {
     spaceBetween: 30,
-    autoplay: true,
+    // autoplay: true,
     effect: "fade",
     navigation: {
         nextEl: ".swiper-button-next",

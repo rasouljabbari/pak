@@ -193,8 +193,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .dv-toggler-btn {
     color: #000;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    transform: translateY(-50%);
 }
 
 .dv-navbar .fa-bars {
@@ -448,7 +449,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .dv-offer-img {
     height: 210px;
     width: 221px;
-    margin-bottom : 1rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .dv-offer-img img {
@@ -1578,10 +1579,11 @@ input:focus, select:focus, textarea:focus {
 /*    display: block;*/
 /*    object-fit: cover;*/
 /*}*/
-.f-32{
+.f-32 {
     font-size: 32px;
 }
-.dv-back-arrow{
+
+.dv-back-arrow {
     position: absolute;
     left: 4rem;
     top: 3rem;
@@ -1589,10 +1591,12 @@ input:focus, select:focus, textarea:focus {
     color: #fff;
     font-weight: bold;
 }
-a.text-red:hover{
+
+a.text-red:hover {
     color: var(--lightRed);
 }
-.dv-login-form-input{
+
+.dv-login-form-input {
     background-color: #F8F8F8;
     color: #212121;
     font-size: 16px;
@@ -1600,7 +1604,8 @@ a.text-red:hover{
     padding: 0.75rem 0.5rem;
     text-align: right;
 }
-.dv-login-form-input::placeholder{
+
+.dv-login-form-input::placeholder {
     color: #808080;
 }
 
@@ -1611,7 +1616,7 @@ a.text-red:hover{
     transform: translateX(-50%);
 }
 
-.dv-login-bg-img{
+.dv-login-bg-img {
     width: 100%;
     background-image: url("../images/login1080.jpg");
 
@@ -1628,9 +1633,9 @@ a.text-red:hover{
     background-size: 100% 100% !important;
 }
 
-.dv-center-bg-form{
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+.dv-center-bg-form {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1641,15 +1646,15 @@ a.text-red:hover{
     width: 40%;
 }
 
-.dv-login-main{
+.dv-login-main {
     height: 100vh;
 }
 
-.dv-alert-arrow{
+.dv-alert-arrow {
     color: var(--mainRed);
 }
 
-.code-input , .code-input:focus{
+.code-input, .code-input:focus {
     background: transparent;
     border: none;
     border-bottom: 3px solid #f8f8f8 !important;
@@ -1659,11 +1664,16 @@ a.text-red:hover{
     color: #fff;
     text-align: center;
 }
+
+.dv-logo-parent{
+    width: 100px;
+}
 @media (min-width: 1367px) {
     .dv-dropdown-menu .nav-item {
         margin: 0 0 0 2rem;
     }
-    .dv-login-form{
+
+    .dv-login-form {
         padding: 3rem 4rem;
     }
 }
@@ -1701,7 +1711,7 @@ a.text-red:hover{
         max-width: 400px;
     }
 
-    .dv-center-bg-form{
+    .dv-center-bg-form {
         width: 60%;
     }
 }
@@ -1710,9 +1720,11 @@ a.text-red:hover{
     .dv-dropdown-menu .nav-item {
         height: 40px;
     }
-    .dv-mega-menu{
+
+    .dv-mega-menu {
         transform: none !important;
     }
+
     .menuSwiper, .menuSwiper .swiper-slide {
         min-width: 300px;
         max-width: 350px;
@@ -1738,9 +1750,10 @@ a.text-red:hover{
         right: 1rem;
     }
 
-    .dv-center-bg-form{
+    .dv-center-bg-form {
         width: 80%;
     }
+
     .dv-navbar .nav-item.dropdown {
         position: relative !important;
     }
@@ -1761,9 +1774,10 @@ a.text-red:hover{
 }
 
 @media (max-width: 768px) {
-    .dv-login-bg-img{
+    .dv-login-bg-img {
         background: url("../images/login_responsive.jpg") no-repeat;
     }
+
     .w-sm-75, .w-sm-25 {
         width: 100%;
         margin: 0 0 0.5rem 0;
@@ -1772,14 +1786,17 @@ a.text-red:hover{
     .w-md-50 {
         width: 100%;
     }
-    .dvBlogPostSlider , .dvBlogPostSlider .swiper-slide img{
+
+    .dvBlogPostSlider, .dvBlogPostSlider .swiper-slide img {
         height: 240px !important;
     }
-    .dv-banners-after-offer , .dv-anner-banner , .dv-agsat-banner , .BannerSwiper .swiper-slide img , .samsungSlider .swiper-slide img{
+
+    .dv-banners-after-offer, .dv-anner-banner, .dv-agsat-banner, .BannerSwiper .swiper-slide img, .samsungSlider .swiper-slide img {
         height: 150px !important;
     }
-    .BannerSwiper , .samsungSlider , .dv-agsat-banner a img,.dv-agsat-banner a ,.dv-anner-banner a,.dv-anner-banner a img , .offerSlider .swiper-slide .dv-offer-cards,
-    .swiper-slide a img{
+
+    .BannerSwiper, .samsungSlider, .dv-agsat-banner a img, .dv-agsat-banner a, .dv-anner-banner a, .dv-anner-banner a img, .offerSlider .swiper-slide .dv-offer-cards,
+    .swiper-slide a img {
         width: 100%;
         height: inherit !important;
     }
@@ -1801,14 +1818,20 @@ a.text-red:hover{
         font-size: 18px;
     }
 
-    .dv-login-form{
+    .dv-login-form {
         padding: 2rem 3rem;
     }
-    .dv-center-bg-form{
+
+    .dv-center-bg-form {
         width: 90%;
     }
 }
 
+@media (max-width: 576px) {
+    .dv-logo-parent{
+        width: 85px;
+    }
+}
 @media (max-width: 420px) {
     .menuSwiper, .menuSwiper .swiper-slide {
         min-width: 250px;
@@ -1819,7 +1842,7 @@ a.text-red:hover{
         width: 85vw;
     }
 
-    .dv-login-form{
+    .dv-login-form {
         padding: 2rem 1rem;
     }
 }
